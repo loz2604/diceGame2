@@ -6,6 +6,7 @@ body{
     align-items:center;
     height:100vh;
     letter-spacing:2px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 p{
    font-size: larger;
