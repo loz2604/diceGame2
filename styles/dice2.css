@@ -121,7 +121,7 @@ p{
 }
 #player2roll:active{
     /* color:whitesmoke; */
-   background-image:linear-gradient(rgb(87, 214, 201),rgb(171, 235, 231), rgb(87, 214, 201));
+   background-image:linear-gradient(rgb(192, 156, 88),rgb(250, 226, 185),rgb(192, 156, 88));
 }
 
 #player2hold{
@@ -143,7 +143,7 @@ p{
 }
 #player2hold:active{
    /* color:whitesmoke; */
-  background-image:linear-gradient(rgb(87, 214, 201),rgb(171, 235, 231), rgb(87, 214, 201));
+  background-image:linear-gradient(rgb(192, 156, 88),rgb(250, 226, 185),rgb(192, 156, 88));
 }
 
  #player1{
