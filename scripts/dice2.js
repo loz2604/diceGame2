@@ -19,9 +19,7 @@ let randomNumber = [];
 let player1total = 0;
 let player2total = 0;
 
-// write a game over function
-// Add to player 1 after they press hold
-// 
+// write a game over function // Add to player 1 after they press hold
 
 
 newGame.addEventListener("click", () => {
@@ -140,24 +138,18 @@ player1hold.addEventListener("click", () => {
     function youWin(text) {
         document.getElementById("player2").innerHTML = (text);
     }
-    if (currentScore == currentScore2) {
-        player1roll.style.display = "none";
-        player1hold.style.display = "none";
-        player2roll.style.display = "none";
-        player2hold.style.display = "none";
-        youWin("Player 1")
 
-        // if (player1total < player2total) {
-        //     console.log("HI");
-        //     player2.style.display = "block";
-        //     youWin("Well Done Player 2, You Win!")
-        // } else if (player2total < player1total) {
-        //     player2.style.display = "block";
-        //     youWin("Well Done Player 1, You Win!")
-        // } else {
-        //     youWin("Really? A draw??")
-        // }
-    }
+    //     // if (player1total < player2total) {
+    //     //     console.log("HI");
+    //     //     player2.style.display = "block";
+    //     //     youWin("Well Done Player 2, You Win!")
+    //     // } else if (player2total < player1total) {
+    //     //     player2.style.display = "block";
+    //     //     youWin("Well Done Player 1, You Win!")
+    //     // } else {
+    //     //     youWin("Really? A draw??")
+    //     // }
+    // }
     player1roll.style.display = "none";
     player1hold.style.display = "none";
     player2roll.style.display = "block";
@@ -269,29 +261,30 @@ player2hold.addEventListener("click", () => {
     function changeText(text) {
         document.getElementById("score1").innerHTML = (text);
     }
-    // function youWin(text) {
-    //     document.getElementById("player2").innerHTML = (text);
-    // }
-    // if (currentScore == currentScore2) {
-    //     newGame.style.display = "block";
-    //     player1roll.style.display = "none";
-    //     player1hold.style.display = "none";
-    //     player2roll.style.display = "none";
-    //     player2hold.style.display = "none";
-    //     player2.style.display = "block";
+    function youWin(text) {
+        document.getElementById("player2").innerHTML = (text);
+    }
+    if (player1total >= 2) {
+        player1roll.style.display = "none";
+        player1hold.style.display = "none";
+        player2roll.style.display = "none";
+        player2hold.style.display = "none";
+        player2.style.display = "block";
+        console.log("Game over");
+        if (player1total < player2total) {
+            // player2.style.display = "block";
+            youWin("Well Done Player 2, You Win!")
+            newGame.style.display = "block";
+        } else if (player2total < player1total) {
+            newGame.style.display = "block";
+            // player2.style.display = "block";
+            youWin("Well Done Player 1, You Win!")
+        } else {
+            youWin("Really? A draw??")
+            newGame.style.display = "block";
+        }
+    }
 
-
-    //     // if (player1total < player2total) {
-    //     //     player2.style.display = "block";
-    //     //     youWin("Well Done Player 2, You Win!")
-    //     // } else if (player2total < player1total) {
-    //     //     console.log("HI");
-    //     //     player2.style.display = "block";
-    //     //     youWin("Well Done Player 1, You Win!")
-    //     // } else {
-    //     //     youWin("Really? A draw??")
-    //     // }
-    // }
     if (player1total == 0) {
         player1roll.style.display = "block";
         player1hold.style.display = "block";
@@ -307,7 +300,7 @@ player2hold.addEventListener("click", () => {
         player2roll.style.display = "none";
         player2hold.style.display = "none";
         player1.style.display = "none";
-        player2.style.display = "none";
+        // player2.style.display = "none";
         changeText2("Total Score:");
     }
 
